@@ -1,19 +1,37 @@
 package com.company.teachmeskills.animal;
 
-public class Cat extends Animal {
+public class Cat implements Animal {
+
+    private String food;
+    private String location;
+    private String nameAnimal;
 
     public Cat(String food, String location, String nameAnimal) {
-        super(food, location, nameAnimal);
+        this.food = food;
+        this.location = location;
+        this.nameAnimal = nameAnimal;
     }
-
 
     @Override
     public String makeNoise() {
-        return super.makeNoise() + " мяу";
+        return nameAnimal + " делает мяу";
     }
 
     @Override
     public void eat() {
         System.out.println("Это животное ест " + food);
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    public String getFood() {
+        return food;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

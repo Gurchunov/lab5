@@ -1,34 +1,16 @@
 package com.company.teachmeskills.animal;
 
-public abstract class Animal {
+public interface Animal {
 
-    protected String food;
-    protected String location;
-    protected String nameAnimal;
+    String makeNoise();
 
-    public Animal(String food, String location, String nameAnimal) {
-        this.food = food;
-        this.location = location;
-        this.nameAnimal = nameAnimal;
-    }
+    void eat();
 
-    public String makeNoise() {
-        return nameAnimal + " делает";
-    }
+    void sleep();
+
+    String getFood();
+
+    String getLocation();
 
 
-    public abstract void eat();
-
-    public void sleep() {
-        System.out.println(nameAnimal + " животное спит");
-    }
-
-
-    public String getFood() {
-        return food;
-    }
-
-    public String getLocation() {
-        return location;
-    }
 }
